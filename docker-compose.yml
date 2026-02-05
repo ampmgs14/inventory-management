@@ -1,0 +1,22 @@
+services:
+  db:
+    build: ./db
+    container_name: asset-db
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    container_name: asset-backend
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    container_name: asset-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"

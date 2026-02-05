@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>spitim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1>SPIT Inventory Managemnet</h1>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- dynamic tabs injected from /api/asset-types -->
+  <nav id="tabs" class="tabs"></nav>
+
+  <!-- filters + add buttons -->
+  <div id="controls" class="controls"></div>
+
+  <!-- data table -->
+  <div class="table-wrapper">
+    <table id="table">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

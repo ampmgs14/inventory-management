@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+}
+
+/* HEADER */
+.header {
+  background: #161b22;
+  color: #c9d1d9;
+  padding: 12px 0;
+  border-bottom: 1px solid #30363d;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* TABS (repo-style nav) */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #30363d;
+  margin-top: 20px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  color: #8b949e;
+  font-weight: 500;
+}
+
+.tabs button:hover {
+  color: #c9d1d9;
+}
+
+.tabs button.active {
+  color: #c9d1d9;
+  border-bottom: 2px solid #f78166;
+}
+
+/* CONTROLS */
+.controls {
+  margin: 15px 0;
+}
+
+.controls input {
+  padding: 6px 8px;
+  margin-right: 6px;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  background: #0d1117;
+  color: #c9d1d9;
+}
+
+.controls input::placeholder {
+  color: #8b949e;
+}
+
+.controls button {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #21262d;
+  color: #c9d1d9;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #30363d;
+}
+
+.controls button.primary {
+  background: #238636;
+  color: white;
+  border: none;
+}
+
+.controls button.primary:hover {
+  background: #2ea043;
+}
+
+/* TABLE */
+.table-wrapper {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #30363d;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #161b22;
+  font-weight: 600;
+  color: #c9d1d9;
+}
+
+td {
+  color: #c9d1d9;
+}
+
+tr:hover {
+  background: #161b22;
+}
+
+/* DELETE BUTTON */
+td button {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #21262d;
+  color: #f85149;
+  cursor: pointer;
+}
+
+td button:hover {
+  background: #30363d;
+}
