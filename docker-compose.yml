@@ -2,21 +2,42 @@ services:
   db:
     build: ./db
     container_name: asset-db
-    ports:
-      - "5432:5432"
+    networks:
+      - private_net
+    expose:
+      - "5432"
 
   backend:
     build: ./backend
     container_name: asset-backend
     depends_on:
       - db
-    ports:
-      - "8000:8000"
+    networks:
+      - private_net
+    expose:
+      - "8000"
 
   frontend:
     build: ./frontend
     container_name: asset-frontend
     depends_on:
       - backend
+    networks:
+      - public_net
+      - private_net
     ports:
       - "3000:80"
+
+networks:
+  public_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.10.0/24
+
+  private_net:
+    driver: bridge
+    internal: true
+    ipam:
+      config:
+        - subnet: 172.30.20.0/24
